@@ -16,7 +16,7 @@ function populateStates() {
 
 function getCities() {
   const citySelect = document.querySelector("select[name=city]");
-  const stateInput = document.querySelector("[name=state]");
+  const stateInput = document.querySelector("select[name=state]");
 
   const stateValue = event.target.value;
 
