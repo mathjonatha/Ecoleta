@@ -25,6 +25,9 @@ function getCities() {
 
   const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`;
 
+  citySelect.innerHTML = "<option value>Selecione sua cidade</option>";
+  citySelect.disabled = true;
+
   fetch(url)
     .then((res) => {
       return res.json();
@@ -38,3 +41,37 @@ function getCities() {
 }
 
 document.querySelector("select[name=uf]").addEventListener("change", getCities);
+
+const itemsToCollect = document.querySelectorAll(".items-grid li");
+
+for (const item of itemsToCollect) {
+  item.addEventListener("click", handleSelectedItem);
+}
+
+const collectedItems = document.querySelector("input[name=items]");
+
+let selectedItems = [];
+
+function handleSelectedItem(event) {
+  const itemLi = event.target;
+  const itemID = itemLi.dataset.id;
+
+  itemLi.classList.toggle("selected");
+
+  const alreadySelected = selectedItems.findIndex((item) => {
+    const itemFound = item === itemID;
+    return itemFound;
+  });
+
+  if (alreadySelected >= 0) {
+    const filteredItems = selectedItems.filter((item) => {
+      const itemIsDifferent = item !== itemID;
+      return itemIsDifferent;
+    });
+    selectedItems = filteredItems;
+  } else {
+    selectedItems.push(itemID);
+  }
+
+  collectedItems.value = selectedItems;
+}
