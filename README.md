@@ -40,7 +40,7 @@ Para ver o protótipo do projeto acesse o [Figma](https://www.figma.com/file/1Sx
 
 ## ℹ Como usar
 
-Para clonar e executar este aplicativo, você precisará do [Git](https://git-scm.com) instalado em seu computador.
+Para clonar e executar este aplicativo, você precisará do [Git](https://git-scm.com) e [Node.js](https://nodejs.org/pt-br/) instalado em seu computador.
 
 Em sua linha de comando:
 
@@ -51,10 +51,14 @@ git clone https://github.com/HeitorAugustoLN/Ecoleta
 # Vá para o repósitorio
 cd .\Ecoleta\
 
-# Abra o index.html
-start .\index.html\
+# Instale as dependências
+npm install
 
-# AVISO: Os redirects estão apropriados para o Live Server, provavelmente os links estarão errado se você estiver sem o Live Server do VS Code
+# Inicie o site
+npm start
+
+# Acesse o site pela linha de comando ou pelo navegador
+start "http://localhost:3000"
 ```
 
 ## 🤔 Como contribuir
