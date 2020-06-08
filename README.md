@@ -33,6 +33,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [JavaScript](https://pt.wikipedia.org/wiki/JavaScript)
 - [HTML](https://pt.wikipedia.org/wiki/HTML)
 - [CSS](https://pt.wikipedia.org/wiki/Cascading_Style_Sheets)
+---
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [Express](https://expressjs.com/pt-br/)
+- [SQLite3](https://www.sqlite.org/index.html)
 
 ## 🎨 Design
 
