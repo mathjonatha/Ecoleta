@@ -8,6 +8,7 @@
 
 {% block styles %}
   <link rel="stylesheet" href="/styles/create-point.css" />
+  <link rel="stylesheet" href="./styles/modal.css">
 {% endblock styles %} 
 
 {% block content %} 
@@ -63,7 +64,7 @@
         <select name="city" disabled="disabled" required="required">
           <option value="">Selecione a Cidade</option>
         </select>
-      </div>
+      </div>  
     </div>
   </fieldset>
 
@@ -111,6 +112,15 @@
   <button type="submit">Cadastrar ponto de coleta</button>
 </form>
 {% endblock content%} 
+
+{% block modal %}
+    {% if saved %}
+        {% include "partials/point-created.html" %}
+    {% endif %}
+    {% if error %}
+      {% include "partials/create-point-error.html" %}
+    {% endif %}
+{% endblock modal %}
 
 {% block scripts %}
   <script src="/scripts/create-point.js"></script>

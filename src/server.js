@@ -17,21 +17,31 @@ server.get("/create-point", (req, res) => {
   return res.render("create-point.html");
 });
 server.get("/search-results", (req, res) => {
-  database.all(`SELECT * FROM places`, function (err, rows) {
-    if (err) {
-      console.log(err);
+  const search = req.query.search;
+
+  if (search === "") {
+    return res.render("search-results.html", { total: 0 });
+  }
+
+  database.all(
+    `SELECT * FROM places  WHERE city LIKE '${search}%'  `,
+    function (err, rows) {
+      if (err) {
+        console.log(err);
+      }
+
+      const total = rows.length;
+
+      console.log("Aqui estão seus registros: ");
+      console.log(rows);
+
+      return res.render("search-results.html", { places: rows, total });
     }
-
-    const total = rows.length;
-
-    console.log("Aqui estão seus registros: ");
-    console.log(rows);
-
-    return res.render("search-results.html", { places: rows, total });
-  });
+  );
 });
 
 server.post("/save-point", (req, res) => {
+  console.log(req.body);
   const query = `
     INSERT INTO places (
       image,
@@ -56,11 +66,12 @@ server.post("/save-point", (req, res) => {
   function afterInsertData(error) {
     if (error) {
       console.log(error);
+      return res.render("create-point.html", { error: true });
     }
     console.log("Cadastrado com sucesso!");
     console.log(this);
 
-    return res.send("ok");
+    return res.render("create-point.html", { saved: true });
   }
 
   database.run(query, values, afterInsertData);

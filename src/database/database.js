@@ -55,12 +55,12 @@ database.serialize(() => {
   //   }
   //   console.log("Registro deletado com sucesso!");
   // });
-    // database.run(`DELETE FROM places`, function (err) {
-    //   if (err) {
-    //     return console.log(err);
-    //   }
-    //   console.log("Registro deletado com sucesso!");
-    // });
+  // database.run(`DELETE FROM places`, function (err) {
+  //   if (err) {
+  //     return console.log(err);
+  //   }
+  //   console.log("Registro deletado com sucesso!");
+  // });
 });
 
 module.exports = database;
