@@ -14,6 +14,18 @@
   <img src="https://img.shields.io/github/languages/count/HeitorAugustoLN/Ecoleta?color=7159C1&style=for-the-badge" alt="Quantidade de Linguagens">
 </p>
 
+<p align="center">
+  <a href="#ℹ-o-que-é-a-next-level-week">Next Level Week</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-design">Design</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#ℹ-como-usar">Como usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
+</p>
+
+---
+
 ## ℹ O que é a Next Level Week?
 
 O NLW é uma semana prática com muito código, desafios, networking e um único objetivo: te levar para o próximo nível.
